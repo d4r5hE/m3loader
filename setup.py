@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='m3loader',
-    version='0.1.3',  # Make sure the version is updated
+    version='0.1.5',  # Updated version
     description='A tool to download and merge M3U8 segments into an MP4 file.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -10,7 +10,7 @@ setup(
     author_email='darsh.564742@gmail.com',
     url='https://github.com/d4r5hE/m3loader',
     license='MIT',
-    packages=find_packages(),
+    packages=find_packages(include=['m3loader', 'm3loader.*']),
     include_package_data=True,
     install_requires=[
         'aiohttp',
