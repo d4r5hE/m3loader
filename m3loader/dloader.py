@@ -109,6 +109,12 @@ def download(m3u8_url, output_path='.', output_name=None, progress=False, timeou
             sys.exit(1)
         end_time = time.time()
 
+        # Verify all segments are downloaded
+        missing_segments = [segment for segment in segment_names if not os.path.exists(segment)]
+        if missing_segments:
+            print(f"Missing segments: {missing_segments}")
+            sys.exit(1)
+
         # List downloaded segments
         segments = sorted(segment_names)
 
