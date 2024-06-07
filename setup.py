@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='m3loader',
-    version='0.1.1',
+    version='0.1.6',
     description='A tool to download and merge M3U8 segments into an MP4 file.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
